@@ -1,0 +1,186 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #f00; 
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+.blurry-background {
+    background-image: url(/public/img/background1.jpg); 
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service-card {
+    background-color: rgb(0, 0, 0); 
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.service-card h2 {
+    color: #f00; 
+}
+
+.service-card p {
+    color: #fff;
+}
+
+.aim {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.aim-card {
+    background-color: rgba(0, 0, 0, 0.842); 
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.aim-card h2 {
+    color: #f00; 
+}
+
+.aim-card p {
+    color: #fff;
+}
+button
+{
+    padding: 5px;
+    background-color: #f00;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+button:hover
+{
+    background-color: rgb(206, 67, 67);    
+}
+
+/* footer {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .aim-card {
+        width: 100%;
+    }
+} */
+
+.footer {
+    background-color: black;
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: white;
+}

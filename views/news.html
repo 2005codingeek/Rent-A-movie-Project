@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <link rel="stylesheet" href="/public/add..css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="http://localhost:3000/news" method="POST">
+            <h2>Customer Information</h2>
+            
+            <!-- <label for="customer_id">Customer ID</label>
+            <input type="text" id="customer_id" name="customer_id" required> -->
+            
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="First_name" required>
+            
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="Last_name" required>
+            
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" id="phone_number" name="Phhone_number" required>
+            
+            <label for="street_address">Street Address</label>
+            <input type="text" id="street_address" name="Street_address" required>
+            
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+            
+            <label for="zipcode">Zip Code</label>
+            <input type="text" id="zipcode" name="Zip_code" required>
+            
+            <button type="submit" >Submit</button>
+    
+        </form>
+
+        <form action="/login" method="GET">
+            <button class="btn" type="submit">
+                  <!-- <a href="services.html" class="main-menu-link">Main Menu</a> -->
+                   Main Menu
+            </button >
+        </form>
+
+    </div>
+    
+</body>
+</html>

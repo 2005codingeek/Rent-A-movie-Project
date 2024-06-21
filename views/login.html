@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Webpage Design </title>
+    <link rel = "stylesheet" href="/public/login.css">
+  </head>
+
+  <body>
+    <div class = "main">
+      <div class = "navbar">
+        <div class = "icon">
+          <h2 class = "logo">Top-tier & Elite</h2>
+        </div>
+        <nav>
+           <div class="menu">
+             <ul>
+                  <li><a href="#"> LOGIN </a></li>
+                  <li><a href="#services"> SERVICES </a></li>
+                  <li><a href="#Customer-section">CUSTOMER</a></li>
+                  <li><a href="#About"> ABOUT</a></li>
+             </ul>
+        </div>
+        </nav>
+
+
+      </div>
+      <div class = "content">
+        <h1>Top-tier & <br><span>Elite</span> <br>RentalMovie</h1>
+        <p class = "par"> Top-tier RentalMovie store was found in 1912 by Brandon and his collegues.
+          <br> A team full of partion to deliver quality Movies to clients and cinemas.<br>
+          Customer satisfaction is our priority
+        </p>
+           
+        <form action="/Background" method="GET">
+             <button class = "cn" type="submit"> <!--<a href="Background.html">READ-MORE</a>--> READ-MORE</button>
+        </form>
+
+        <div class = "form">
+          <h2>Login Here </h2>
+           <form action="/login" method="POST">
+             <input type = "text" name = "userid"  placeholder="Enter Adiministrator ID" required>
+             <br>
+             <input type = "password" name = "password" placeholder="Enter password  Here"  required>
+             <br>
+             <button type = "submit" class = "btnn"> <!--<a href="#" onclick="alert('successfully')"> -->Login</a></button>
+
+             <p class = "link"> Don't have an account 
+             <br>
+            <a href = "#"> Sign up </a> Here</p>
+            <p class = "liw">Log in with</p>
+          </form>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <section id="services">
+
+      <h2>SERVICES</h2>
+
+      <div class="to-do">
+        <h3>RECORD-CUSTOMER-DETAILS</h3>
+        <p>the platforms makes it possible to enter customer details such as <br>
+        phone-number, first-name, last-name, state.....etc</p>
+      </div>
+
+      <div class="to-do">
+        <h3>SEARCH-CUSTOMER</h3>
+        <p>Be able to search for customers details using their name or phone number.<br>
+        Also make it possible to add their transaction to the database on a specific date.</p>
+      </div>
+
+      <div class="to-do">
+          <h3>RECORD-TRANSACTION</h3>
+          <p>Should be able to record daily transaction sent to the database with the type <br>
+          of movie rented, clients details, price, type ......etc</p>
+      </div>
+
+      <p> These are a few mentioned-services. However the system has a lot of functionalities <br>
+       you can click the button to read more </p> <br>
+
+       <form action="/to_do" method="GET" class="go">
+          <button class="btn" type="submit"><!--<a href="to-do.html">click</a>-->CLICK</button>
+       </form>
+
+    </section>
+    
+    <section class="container">
+      <div class="left-container">
+          <h1>Subscribe to Newsletters</h1>
+          <p>Stay updated with our latest news and offers. Subscribe to our newsletters and never miss an update!</p>
+
+          <form action="/news"  method="get">
+                  <button class="button" type="submit" >Subscribe Now</button>
+          </form>
+      </div>
+
+      <div class="right-container">
+          <h2>Customer Section</h2>
+          <p>Welcome to the customer section. Here you can find the latest updates and information. Stay tuned for more updates and offers.</p>
+          
+          <form action="/customer" method="get">
+              <button class="button" type="submit">Check Trending Movies</button>
+          </form>
+
+
+      </div>
+   </section>
+
+   <section class="clients-section" id="Customer-section">
+    <h2>Clients Speak</h2>
+    <div class="clients">
+        <div class="client">
+            <img src="/public/img/client 3.jpeg" alt="Client 1">
+            <p>The quality of the movies is excellent! I'm very satisfied with my purchase.</p>
+            <div class="stars">
+                <span>&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="half-star">&#9733;</span>
+            </div>
+        </div>
+        <div class="client">
+            <img src="/public/img/client 2.jpeg" alt="Client 2">
+            <p>Great service and fast delivery. Highly recommend this store to everyone.</p>
+            <div class="stars">
+                <span>&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="half-star">&#9733;</span>
+            </div>
+        </div>
+        <div class="client">
+            <img src="/public/img/client 1.jpeg" alt="Client ">
+            <p>Amazing experience! The customer care exceeded my expectations in every way.</p>
+            <div class="stars">
+                <span>&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="half-star">&#9733;</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id ="About"> 
+
+       <h3>ABOUT-US</h3>
+      <div class="about">
+          <p>
+            <span>Our Commitment:</span> <br>
+
+            At Top-tier, customer satisfaction isn't just a goal; it's our top priority. <br>
+            We are dedicated to providing a seamless and enjoyable rental experience from start to finish. From the moment you walk through our doors to the time you return your rentals, <br>
+            expect nothing but the best in service and selection. <br>
+            
+            <span>Team:</span> <br>
+            
+            Behind every great movie rental experience is a team of passionate individuals who truly love what they do. <br>
+            Our employees embody professionalism, integrity, and a genuine enthusiasm for cinema. With a strong work ethic and a commitment to excellence, <br>
+            they ensure that every customer leaves satisfied and eager to return. <br>
+            
+      
+            
+          </p>
+
+          <address class="locat" >
+            <p>Top-tier & Elite Headquaters<br>
+              Dr mulenga  Managing Diretor, <br>
+              123 Main Street, <br>
+              Los Angeles, CA 90001, <br>
+              United States. </p>
+          </address>
+      </div>
+
+      
+    
+    </section>
+
+    <section>
+       <!-- <footer>
+         <p>&copy; 2024 Top-tier & Elite RentalMovie. All rights reserved.</p>
+       </footer> -->
+    
+           <footer class="footer">
+               <div class="footer-container">
+                   <div class="footer-links">
+                       <a href="#">FAQ</a>
+                       <a href="#">Help Center</a>
+                       <a href="#">Account</a>
+                       <a href="#">Media Center</a>
+                       <a href="#">Investor Relations</a>
+                       <a href="#">Jobs</a>
+                       <a href="#">Ways to Watch</a>
+                       <a href="#">Terms of Use</a>
+                       <a href="#">Privacy</a>
+                       <a href="#">Cookie Preferences</a>
+                       <a href="#">Corporate Information</a>
+                       <a href="#">Contact Us</a>
+                   </div>
+                   <div class="footer-social">
+                       <a href="#"><img src="/public/img/facebook.jpeg" alt="Facebook"></a>
+                       <a href="#"><img src="/public/img/instagram.jpeg" alt="Instagram"></a>
+                       <a href="#"><img src="/public/img/twitter.jpeg" alt="Twitter"></a>
+                       <a href="#"><img src="/public/img/youtube.jpeg" alt="YouTube"></a>
+                   </div>
+                   <div class="footer-copyright">
+                       <p>&copy; 2024 Top-tier & elite, Inc.</p>
+                   </div>
+               </div>
+           </footer>
+
+
+    </section>
+
+  </body>
+</html>

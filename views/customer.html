@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-tier</title>
+    <style>
+        body {
+            background-color: #141414;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        .search-container button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #e50914;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 800px;
+        }
+        .movie {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .movie img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .movie-info {
+            padding: 10px;
+        }
+        .movie-info h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        .movie-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #bbb;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 5);
+            color: #ccc;
+            text-align: center;
+            padding: 10px;
+            /* position: fixed; */
+            margin-bottom: 0px;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .movie:hover
+        {
+            box-shadow: 0 30px 50px #dbdbdb;
+            border: 5px solid rgb(187, 165, 165);
+        }
+        .movie-info button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #e50914;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .footer button
+        {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #e50914;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .header h1
+        {
+            letter-spacing: 1.3px;
+            color: white;
+        }
+        span
+        {
+            color: #e50914;
+        }
+
+
+        video {
+      width: 33.33%;   
+      height: auto;
+      position: relative;
+      margin: 0;
+      float: left;
+      z-index: 1;
+    }
+
+    .flame h3
+    {
+        color: #e50914;
+        letter-spacing: 1.3px;
+        text-align: center;
+    }
+
+    .flame
+    {
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: small;
+        margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* joint the from tanya css */
+
+    .container {
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 600px;
+    box-sizing:border-box;
+    background:#f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    float: left;
+}
+
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top:50%;
+    transform:translate(0, -50%);
+    border-radius:20px; 
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #050505;
+    transform: translate(0, -50%);
+    font-family:system-ui;
+    display: none;
+}
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold; 
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards ;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    opacity: 0;
+    animation:animate 1s ease-in-out 0.3s 1 forwards
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+
+    }
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition:0.3s;
+    color: white;
+    background-color: #f91f10;
+}
+
+.button button:hover{
+     background: red;
+     color: white;
+    }
+
+.slide
+{
+    float: right;
+    left: 140px;
+}
+
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Top-tier <br> <span>& Elite</span></h1>
+        <div class="search-container">
+            <input type="text" placeholder="What movies do you like?">
+            <button>Search</button>
+        </div>
+
+        <!-- <div class="flame">
+            <h3>MOVIE-THERAPY</h3>
+            <p> we offer best 4k and HD movies to entertain and elevate your spirit <br>
+            customer satisfaction is our priority for any more infomation you can visit  <br>
+                our store located at A432 manhattan new york, trump tower..  </p>
+    
+        </div> -->
+    </div>
+    
+<!--    
+    <video src="/public/img/Black Panther Teaser Trailer [HD].mp4" autoplay muted loop></video> -->
+
+
+
+  
+      
+    <div class="container">
+
+        <div class="slide">
+
+            <div class="item" style="background-image: url(/public/img/kelvin.jpeg);">
+                <div class="content">
+                    <div class="name">Challengers</div>
+                    <div class="des">Tashi, a former tennis prodigy turned coach, turned her husand into a champion. But to overcome a losing streak, he needs to face his ex best friend and Tashi's ex-boyfriend</div>
+                    
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(/public/img/Control\ Z\ -\ Wikipedia.jpeg);">
+                    <div class="name"></div>
+                    <!-- <div class="des">A down and out stuntman must find the missing star of his ex-girlfriend's blockbuster film.</div> -->
+        
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(/public/img/movie3.jpg);">
+                <div class="content">
+                    <div class="name">Dune Part Two</div>
+                    <div class="des">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</div>
+                    
+                </div>
+            </div>
+            
+            <div class="item" style="background-image: url(/public/img/dwayne.jpeg);">
+                <div class="content">
+                    <div class="name">The Idea of You</div>
+                    <div class="des">Solène, a 40-year-old single mom, begins an unexpected romance with 24-year-old Hayes Campbell, the lead singer of August Moon, the hottest boy band on the planet.</div>
+                    
+                </div>
+            </div>
+    
+            <div class="item" style="background-image: url(/public/img/captain.jpeg);">
+                <div class="content">
+                    <div class="name">Kingdom of the Planet of the Apes</div>
+                    <div class="des">Many years after the reign of Caesar, a young ape goes on a journey that will lead him to question everything he's been taught about the past and make choices that will define a future for apes and humans alike.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev">< </button>
+            <button class="next"> > </button>
+        </div>
+       
+        <div class="flame">
+            <h3>MOVIE-THERAPY</h3>
+            <p> we offer best 4k and HD movies to entertain and elevate your spirit <br>
+            customer satisfaction is our priority for any more infomation you can visit  <br>
+                our store located at A432 manhattan new york, trump tower..  </p>
+    
+        </div>
+
+        <!-- <div class="flame">
+            <h3>MOVIE-THERAPY</h3>
+            <p> we offer best 4k and HD movies to entertain and elevate your spirit <br>
+            customer satisfaction is our priority for any more infomation you can visit  <br>
+                our store located at A432 manhattan new york, trump tower..  </p>
+    
+        </div> -->
+
+
+    </div>
+        
+    <!-- <script src="/trending.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- <div class="flame">
+        <h3>MOVIE-THERAPY</h3>
+        <p> we offer best 4k and HD movies to entertain and elevate your spirit <br>
+        customer satisfaction is our priority for any more infomation you can visit  <br>
+            our store located at A432 manhattan new york, trump tower..  </p>
+
+    </div> -->
+
+    <div class="movies-container">
+        <div class="movie">
+            <img src="/public/img/kelvin.jpeg" alt="Movie 1">
+            <div class="movie-info">
+                <h3> reality-check</h3>
+                <p>Action</p>
+                <p>Release Date: 12/13/2024</p>
+                <p> Price:  k13 </p>
+                <p> ID: 111</p>
+
+                <form action="/order" method="get">
+                   <button type="submit"> order  </button>
+                </form>
+
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/TALK TO ME (2022 MOVIE) - PARANORMAL PROPAGANDA.jpeg" alt="Movie 2">
+            <div class="movie-info">
+                <h3>TALK TO ME</h3>
+                <p>Drama</p>
+                <p>Release Date: 14/04/2024</p>
+                <p> Price: k14 </p>
+                <P> ID:112</P>
+                 <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/a53f8830-ee87-46dd-a99e-ea87582c333b.jpeg" alt="Movie 3">
+            <div class="movie-info">
+                <h3>PARASTIC</h3>
+                <p>Comedy</p>
+                <p>Release Date: 05/07/2024</p>
+                <p> Price: k11 </p>
+                <p> ID:113</p>
+                 
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/Joker Movie Poster, AmirHosein Naseri.jpeg" alt="Movie 4">
+            <div class="movie-info">
+                <h3>JOKER MOVIE POSTER</h3>
+                <p>Horror</p>
+                <p>Release Date: 01/11/2024</p>
+                <p>price: k14</p>
+                <p>ID:114</p>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/Free Guy.jpeg" alt="Movie 5">
+            <div class="movie-info">
+                <h3>FREE GUY</h3>
+                <p>Adventure</p>
+                <p>Release Date: 27/02/2024</p>
+                <p>Price: k14</p>
+                <p>ID:115</p>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/70  All-Time Best Chick Flicks Perfect for Girls' Night.jpeg" alt="Movie 6">
+            <div class="movie-info">
+                <h3>BEST CHICK FLICKS</h3>
+                <p>Romance</p>
+                <p>Release Date: 05/11/2024</p>
+                <p>Price: k12</p>
+                <p>ID:116</p>
+
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/dwayne.jpeg" alt="Movie 7">
+            <div class="movie-info">
+                <h3>SKY-SCRAPER</h3>
+                <p>Sci-Fi</p>
+                <p>Release Date: 09/10/2023</p>
+                <p>Price: k15 </p>
+                <P>ID: 117</P>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/Marvel Fan Watched Avengers_ Endgame 191 Times in Theaters, Breaking Guinness World Record.jpeg" alt="Movie 8">
+            <div class="movie-info">
+                <h3>Endgame-avengers</h3>
+                <p>Thriller</p>
+                <p>Release Date: 06/07/2023</p>
+                <p>Price: k13</p>
+                <P>ID: 118</P>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/Female Action Movies.jpeg" alt="Movie 9">
+            <div class="movie-info">
+                <h3>SALT</h3>
+                <p>Fantasy</p>
+                <p>Release Date: 03/03/2024</p>
+                <p> price: k14 </p>
+                <p> ID: 119</p>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/public/img/'Everything, Everything' Author Talks Movie Adaptation, Plus See the Exclusive Tie-In cover.jpeg" alt="Movie 10">
+            <div class="movie-info">
+                <h3>EVERYTHING-EVERYTHING</h3>
+                <p>Romance</p>
+                <p>Release Date: 11/12/2024</p>
+                <p>Price: k14</p>
+                <P>ID:120</P>
+                <form action="/order" method="get">
+                    <button type="submit"> order  </button>
+                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+       
+        <video src="/public/img/Black Panther Teaser Trailer [HD].mp4" autoplay  loop></video> 
+
+        <p>&copy; 2024 Top-tier & elite. All rights reserved.</p>
+        <p>Made with ❤️ </p>
+        <form action="/login" method="get">
+            <button type="submit"> back </button>
+        </form>
+
+
+    
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">FAQ</a>
+                <a href="#">Help Center</a>
+                <a href="#">Account</a>
+                <a href="#">Media Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="/public/img/facebook.jpeg" alt="Facebook"></a>
+                <a href="#"><img src="/public/img/instagram.jpeg" alt="Instagram"></a>
+                <a href="#"><img src="/public/img/twitter.jpeg" alt="Twitter"></a>
+                <a href="#"><img src="/public/img/youtube.jpeg" alt="YouTube"></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Top-tier & elite, Inc.</p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <script src="/public/trending.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Sections with Blurred Background</title>
+    <link rel="stylesheet" href="/public/services.css">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <header>
+        <h1>Welcome to Top Tier <br>
+            <span> & Elite</span> Services</h1>
+    </header>
+
+    <div class="content">
+
+       
+        <!-- <section>
+            <h2>ADD CUSTOMER</h2>
+            <p>If you want to add customers details to the list <br>
+                         click the button below.</p>
+            <button>CICK-TO-ADD</a></button>
+        </section> -->
+
+        <section>
+
+            <h2> ADD CUSTOMER </h2>
+            <p> If you want to add customers details to the list <br>
+                click the button below... </p>
+
+            <form action="/add" method="GET">
+                 <button>
+                    <!-- <a href="add.html"> CICK-TO-ADD </a> -->
+                   CLICK-TO-ADD
+                </button>
+            </form>
+
+        </section>
+   
+
+        <section>
+
+            <h2>SEARCH MOVIE</h2>
+            <p>If you want to serch for movie by movie name <br>
+                            or type of a movie.. </p>
+            <form action="/movie_name" method="GET">
+               <button >
+                   <!-- <a href="movie_name.html"> CLICK-TO-SEARCH </a> -->
+                   CLICK-TO-SEARCH
+                </button>
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>SEARCH-FOR-CUSTOMER</h2>
+            <p> You can search for a customer by entering their <br>
+                  phone number or last name.</p>
+
+            <form action="/search_customer" method="GET">
+                <button> CLICK-TO-SEARCH </button>
+            </form>
+
+        </section>
+
+        <section>
+            <h2> ADD A MOVIE </h2>
+            <p> you can click the button below to add a movie to the collection database.</p>
+             <form action="/add_movie" method="GET">
+                <button>CLICK-TO-ADD</button>
+             </form>
+        </section>
+
+        <section>
+            <h2>Section 6</h2>
+            <p>This is a paragraph in section 6.</p>
+            <button onclick="location.href='page6.html'">Go to Page 6</button>
+        </section>
+
+    </div>
+   
+    <form action="/login" method="GET">
+        <button  type="submit" class="log">
+              logout
+        </button >
+    </form>
+
+    <footer>
+        &copy; 2024 top tier and elite RentalMovie. All rights reserved.
+    </footer>
+
+</body>
+</html>

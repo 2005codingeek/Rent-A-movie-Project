@@ -1,0 +1,123 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.main 
+{
+    background-image:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7) ), url('/public/img/ocean.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 109vh;
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
+
+.main span
+{
+    color: red;
+    font-size: 64px;
+}
+
+.main h1
+{
+    letter-spacing: 4px;
+    font-family: 'Times New Roman';
+    font-size: 50px;
+ 
+}
+
+.main pre
+{
+    font-family: Arial;
+    color: white;
+    font-size: medium;
+}
+
+.Back-home
+{
+    width: 160px ;
+    height: 40px;
+    background: red;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.Back-home a
+{
+    text-decoration: none;
+    color: black;
+    transition: 3s ease ;
+}
+
+.Back-home:hover
+{
+    background-color: white;
+    box-shadow: black 3px 3px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer {
+    background-color: rgba(4, 9, 30, 0.7);
+    padding: 20px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: white;
+}

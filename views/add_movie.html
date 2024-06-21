@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Input Form</title>
+    <link rel="stylesheet" href="/public/add_movie.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Movie Details</h2>
+        <form action="movie" method="POST">
+            <div class="form-group">
+                <label for="movie_name">Movie Name:</label>
+                <input type="text" id="movie_name" name="movie_name" required>
+            </div>
+            <div class="form-group">
+                <label for="movie_type">Movie Type:</label>
+                <input type="text" id="movie_type" name="movie_type" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="tax">Tax:</label>
+                <input type="number" id="tax" name="tax" step="0.01"  required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="form-group">
+           <form action="/services" method="GET">
+              <button type="submit">
+                   Main Menu 
+              </button>
+           </form>
+        </div>
+    </div>
+</body>
+</html>

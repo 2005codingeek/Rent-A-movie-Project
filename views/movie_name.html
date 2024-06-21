@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="/public/movie_name.css">
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>Search for a Movie</h1>
+
+        <form action="/search" method="POST">
+            <input type="text" name="movie" placeholder="Enter movie name or type" required>
+            <button type="submit">Search</button>
+        </form>
+
+    </div> -->
+
+    <div class="container">
+
+        <h1>Search for a Movie</h1>
+        <form action="/search" method="POST">
+          <input type="text" name="query" placeholder="Enter movie name or type..." required>
+          <button type="submit">search</button>
+        </form>
+
+    </div>
+
+    <div class="main-menu">
+
+       <form action="/services" method="GET">
+          <button type="submit">
+               <!-- <a href="services.html" class="main-menu-link">Main Menu</a> -->
+                Main Menu
+          </button>
+       </form>
+
+    </div>
+
+
+
+  
+      
+    <div class="contain">
+
+        <div class="slide">
+
+            <div class="item" style="background-image: url(/public/img/kelvin.jpeg);">
+                <div class="content">
+                    <div class="name">Challengers</div>
+                    <div class="des">Tashi, a former tennis prodigy turned coach, turned her husand into a champion. But to overcome a losing streak, he needs to face his ex best friend and Tashi's ex-boyfriend</div>
+                    
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(/public/img/Control\ Z\ -\ Wikipedia.jpeg);">
+                    <div class="name"></div>
+                    <!-- <div class="des">A down and out stuntman must find the missing star of his ex-girlfriend's blockbuster film.</div> -->
+        
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(/public/img/movie3.jpg);">
+                <div class="content">
+                    <div class="name">Dune Part Two</div>
+                    <div class="des">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</div>
+                    
+                </div>
+            </div>
+            
+            <div class="item" style="background-image: url(/public/img/dwayne.jpeg);">
+                <div class="content">
+                    <div class="name">The Idea of You</div>
+                    <div class="des">Solène, a 40-year-old single mom, begins an unexpected romance with 24-year-old Hayes Campbell, the lead singer of August Moon, the hottest boy band on the planet.</div>
+                    
+                </div>
+            </div>
+    
+            <div class="item" style="background-image: url(/public/img/captain.jpeg);">
+                <div class="content">
+                    <div class="name">Kingdom of the Planet of the Apes</div>
+                    <div class="des">Many years after the reign of Caesar, a young ape goes on a journey that will lead him to question everything he's been taught about the past and make choices that will define a future for apes and humans alike.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+    
+
+        <!-- <div class="flame">
+            <h3>MOVIE-THERAPY</h3>
+            <p> we offer best 4k and HD movies to entertain and elevate your spirit <br>
+            customer satisfaction is our priority for any more infomation you can visit  <br>
+                our store located at A432 manhattan new york, trump tower..  </p>
+    
+        </div> -->
+
+
+    </div>
+    
+    <script src="/public/trending.js"></script>
+
+
+</body>
+</html>

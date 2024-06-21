@@ -1,0 +1,52 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power BI and SSRS UI</title>
+</head>
+<body>
+    <h1>Welcome to the Power BI and SSRS UI</h1>
+    <div>
+        <h2>Power BI Reports</h2>
+        <div id="powerbi-container"></div>
+    </div>
+    <div>
+        <h2>SSRS Reports</h2>
+        <div id="ssrs-container"></div>
+    </div>
+</body>
+</html>
+<!-- views/index.ejs (additional code) -->
+<script>
+    async function loadPowerBIReport() {
+        const response = await fetch('/powerbi-report');
+        const data = await response.json();
+        const embedUrl = data.embedUrl;
+
+        const powerbiContainer = document.getElementById('powerbi-container');
+        const iframe = document.createElement('iframe');
+        iframe.src = embedUrl;
+        iframe.width = "800px";
+        iframe.height = "600px";
+        powerbiContainer.appendChild(iframe);
+    }
+
+    loadPowerBIReport();
+</script>
+<!-- views/index.ejs (additional code) -->
+<script>
+    async function loadSSRSReport() {
+        const response = await fetch('/ssrs-report');
+        const data = await response.json();
+        const embedUrl = data.embedUrl;
+
+        const ssrsContainer = document.getElementById('ssrs-container');
+        const iframe = document.createElement('iframe');
+        iframe.src = embedUrl;
+        iframe.width = "800px";
+        iframe.height = "600px";
+        ssrsContainer.appendChild(iframe);
+    }
+
+    loadSSRSReport();
+</script>

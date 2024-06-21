@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Rental Order</title>
+    <link rel="stylesheet" href="/public/order.css">
+</head>
+<body>
+    <h1>Order a Movie</h1>
+    <form id="orderForm"  action="/order" method="post">
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" name="customer_Id" required><br><br>
+
+        <label for="movieId">Movie ID:</label>
+        <input type="text" id="movieId" name="movie_Id" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <label for="tax">Tax:</label>
+        <input type="number" id="tax" name="tax" required><br><br>
+
+        <button type="submit">Order</button>
+    </form>
+    <form action="/customer" method="GET">
+        <button type="submit">Order-again</button>
+    </form>
+
+
+    <script src="/public/order.js"></script>
+</body>
+</html>
